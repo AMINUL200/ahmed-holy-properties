@@ -1,0 +1,230 @@
+@import "tailwindcss";
+
+:root {
+  /* ===== BRAND COLORS ===== */
+  --color-brand-dark: #1E3A8A;
+  --color-brand: #2563EB;
+  --color-brand-light: #38BDF8;
+
+  /* ===== BACKGROUND ===== */
+  --color-bg: #F8FAFC;
+  --color-bg-soft: #EFF6FF;
+  --color-white: #FFFFFF;
+
+  /* ===== TEXT ===== */
+  --color-text-primary: #0F172A;
+  --color-text-secondary: #334155;
+  --color-text-light: #64748B;
+  --color-text-white: #FFFFFF;
+
+  /* ===== BUTTONS ===== */
+  --color-btn-primary: #2563EB;
+  --color-btn-primary-hover: #1E40AF;
+
+  --color-btn-secondary: #38BDF8;
+  --color-btn-secondary-hover: #0EA5E9;
+
+  /* ===== BORDER ===== */
+  --color-border: #E2E8F0;
+  --color-border-focus: #2563EB;
+
+  /* ===== STATUS ===== */
+  --color-success: #22C55E;
+  --color-warning: #F59E0B;
+  --color-error: #EF4444;
+
+  /* ===== EFFECTS ===== */
+  --shadow-card: 0 10px 20px rgba(37, 99, 235, 0.15);
+}
+
+
+/* =========================
+   TEXT COLORS
+========================= */
+.text-primary {
+  color: var(--color-text-primary);
+}
+
+.text-secondary {
+  color: var(--color-text-secondary);
+}
+
+.text-light {
+  color: var(--color-text-light);
+}
+
+.text-white {
+  color: var(--color-text-white);
+}
+
+/* =========================
+   BACKGROUND COLORS
+========================= */
+.bg-primary {
+  background-color: var(--color-bg);
+}
+
+.bg-soft {
+  background-color: var(--color-bg-soft);
+}
+
+.bg-white {
+  background-color: var(--color-white);
+}
+
+.bg-brand {
+  background-color: var(--color-brand);
+}
+
+.bg-brand-dark {
+  background-color: var(--color-brand-dark);
+}
+
+.bg-brand-light {
+  background-color: var(--color-brand-light);
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.btn-primary {
+  background-color: var(--color-btn-primary);
+  color: white;
+  padding: 10px 18px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-btn-primary-hover);
+}
+
+.btn-secondary {
+  background-color: var(--color-btn-secondary);
+  color: var(--color-text-primary);
+  padding: 10px 18px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-btn-secondary-hover);
+}
+
+/* =========================
+   BORDER
+========================= */
+.border-default {
+  border: 1px solid var(--color-border);
+}
+
+/* =========================
+   CARD
+========================= */
+.card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  box-shadow: var(--shadow-card);
+  padding: 16px;
+}
+
+
+
+
+
+/* Smooth scroll behavior for footer links */
+footer a {
+  transition: all 0.3s ease;
+}
+
+/* Custom focus styles for accessibility */
+footer a:focus-visible,
+footer button:focus-visible {
+  outline: 2px solid var(--color-brand-light);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Newsletter input autofill styles */
+footer input:-webkit-autofill,
+footer input:-webkit-autofill:hover,
+footer input:-webkit-autofill:focus {
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0px 1000px rgba(255, 255, 255, 0.05) inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  footer .grid {
+    gap: 2rem;
+  }
+}
+
+
+
+/* Navbar animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.2s ease-out;
+}
+
+/* Active link indicator */
+.nav-link-active {
+  position: relative;
+  color: var(--color-brand);
+}
+
+.nav-link-active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-brand), var(--color-brand-light));
+  border-radius: 2px;
+}
+
+/* Hover underline effect for nav links (optional) */
+.nav-link-hover-effect {
+  position: relative;
+}
+
+.nav-link-hover-effect::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-brand), var(--color-brand-light));
+  transition: width 0.3s ease;
+}
+
+.nav-link-hover-effect:hover::after {
+  width: 100%;
+}
+
+
+.gradient-button {
+  background: linear-gradient(90deg, #1E3A8A 0%, #2563EB 35%, #38BDF8 70%, #2DD4BF 100%);
+  background-size: 200% auto;
+  transition: all 0.3s ease;
+}
+
+.gradient-button:hover {
+  background-position: 100% center;
+  box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.3);
+}

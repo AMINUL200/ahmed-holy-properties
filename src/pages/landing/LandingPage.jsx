@@ -1,0 +1,34 @@
+import React from "react";
+import HeroSection from "../../component/landing_page/HeroSection";
+import ServiceSection from "../../component/landing_page/ServiceSection";
+import AboutSection from "../../component/landing_page/AboutSection";
+import WhyChooseUs from "../../component/landing_page/WhyChooseUs";
+import TestimonialsSection from "../../component/landing_page/TestimonialsSection";
+import BookingSection from "../../component/landing_page/BookingSection";
+
+const LandingPage = () => {
+  return (
+    <div>
+      {/* Section 1 : Hero Section */}
+      <HeroSection />
+
+      {/* Section 2 : Service Section */}
+      <ServiceSection />
+
+        {/* Section 3 : About Section */}
+        <AboutSection />
+
+        {/* Section 4 : Why Choose Us Section */}
+        <WhyChooseUs />
+
+        {/* Section 5 : Testimonials Section */}
+        <TestimonialsSection/>
+
+        {/* Section 6 : Booking Section */}
+        <BookingSection/>
+
+    </div>
+  );
+};
+
+export default LandingPage;
