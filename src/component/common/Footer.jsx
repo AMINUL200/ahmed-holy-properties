@@ -42,7 +42,7 @@ const Footer = () => {
 
   const handleDeveloperClick = (e) => {
     e.preventDefault();
-    window.open('https://skilledworks.cloud', '_blank', 'noopener,noreferrer');
+    window.open('https://skilledworkerscloud.co.uk/', '_blank', 'noopener,noreferrer');
   };
 
   return (

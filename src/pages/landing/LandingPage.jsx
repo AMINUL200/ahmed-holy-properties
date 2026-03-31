@@ -5,15 +5,19 @@ import AboutSection from "../../component/landing_page/AboutSection";
 import WhyChooseUs from "../../component/landing_page/WhyChooseUs";
 import TestimonialsSection from "../../component/landing_page/TestimonialsSection";
 import BookingSection from "../../component/landing_page/BookingSection";
+import PageHelmet from "../../component/common/PageHelmet";
 
 const LandingPage = () => {
   return (
-    <div>
-      {/* Section 1 : Hero Section */}
-      <HeroSection />
+    <>
+      <PageHelmet title="Home | Ahmed Holy Properties - Trusted Property Services" />
 
-      {/* Section 2 : Service Section */}
-      <ServiceSection />
+      <div>
+        {/* Section 1 : Hero Section */}
+        <HeroSection />
+
+        {/* Section 2 : Service Section */}
+        <ServiceSection />
 
         {/* Section 3 : About Section */}
         <AboutSection />
@@ -22,12 +26,12 @@ const LandingPage = () => {
         <WhyChooseUs />
 
         {/* Section 5 : Testimonials Section */}
-        <TestimonialsSection/>
+        <TestimonialsSection />
 
         {/* Section 6 : Booking Section */}
-        <BookingSection/>
-
-    </div>
+        <BookingSection />
+      </div>
+    </>
   );
 };
 
