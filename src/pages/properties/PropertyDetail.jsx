@@ -31,6 +31,7 @@ import {
   Map,
   Navigation,
 } from 'lucide-react';
+import PageLoading from '../../component/common/PageLoading';
 
 const PropertyDetail = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -154,6 +155,21 @@ const PropertyDetail = () => {
       alert('Share feature is supported on modern browsers');
     }
   };
+
+
+    const [loading, setLoading] = React.useState(true);
+
+  React.useEffect(() => {
+    // Simulate loading time (e.g., fetching data or assets)
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }, []);
+
+
+if(loading){
+  return <PageLoading/>
+}
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#F8FAFC] to-[#EFF6FF] pt-26">

@@ -6,6 +6,7 @@ import {
   Calendar, TrendingUp, Eye, Filter, X
 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import PageLoading from '../../component/common/PageLoading';
 
 /* ─────────────────────────────────────────────
    DATA
@@ -463,6 +464,20 @@ export default function PropertiesPage() {
     e.stopPropagation();
     setLikedIds(prev => prev.includes(id) ? prev.filter(x => x !== id) : [...prev, id]);
   };
+
+    const [loading, setLoading] = React.useState(true);
+
+  React.useEffect(() => {
+    // Simulate loading time (e.g., fetching data or assets)
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }, []);
+
+
+if(loading){
+  return <PageLoading/>
+}
 
 //   if (detail) return <PropertyDetail property={detail} onBack={() => setDetail(null)} />;
 

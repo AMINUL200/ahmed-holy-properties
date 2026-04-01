@@ -17,6 +17,7 @@ import {
   Smartphone,
 } from "lucide-react";
 import PageHelmet from "../../component/common/PageHelmet";
+import PageLoading from "../../component/common/PageLoading";
 
 /* ─────────────────────────────────────────
    SHARED
@@ -744,6 +745,19 @@ function CTASection() {
    MAIN PAGE
 ───────────────────────────────────────── */
 export default function ContactPage() {
+    const [loading, setLoading] = React.useState(true);
+
+  React.useEffect(() => {
+    // Simulate loading time (e.g., fetching data or assets)
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }, []);
+
+
+if(loading){
+  return <PageLoading/>
+}
   return (
     <>
       <PageHelmet title="Contact Us | Ahmed Holy Properties - Trusted Property Services" />

@@ -13,6 +13,7 @@ import ContactPage from "./pages/contact/ContactPage";
 import BookingPage from "./pages/booking/BookingPage";
 import PropertiesPage from "./pages/properties/PropertiesPage";
 import PropertyDetail from "./pages/properties/PropertyDetail";
+import ServiceCategoryTemplate from "./pages/service/ServiceCategoryTemplate";
 
 const App = () => {
   return (
@@ -28,6 +29,8 @@ const App = () => {
           <Route path="/book-service" element={<BookingPage />} />
           <Route path="/properties" element={<PropertiesPage/>} />
           <Route path="/properties/:id" element={<PropertyDetail/>} />
+          <Route path="/services/:category" element={<ServiceCategoryTemplate />} />
+          {/* <Route path="/services/renovation" element={<ServiceCategoryTemplate />} /> */}
         </Route>
 
         {/* Admin Layout */}

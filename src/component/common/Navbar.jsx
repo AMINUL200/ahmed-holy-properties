@@ -42,9 +42,9 @@ const Navbar = ({ toggleMenu, isMenuOpen }) => {
       id: "services",
       label: "Services",
       dropdown: [
-        { id: "repair", label: "Repair & Maintenance", path: "/services/repair-maintenance" },
-        { id: "renovation", label: "Renovation & Construction", path: "/services/renovation-construction" },
-        { id: "buy-resell", label: "Buy & Resell Properties", path: "/services/buy-resell" },
+        { id: "repair", label: "Repair & Maintenance", path: "/services/repair" },
+        { id: "renovation", label: "Renovation & Construction", path: "/services/renovation" },
+        { id: "buy-resell", label: "Buy & Resell Properties", path: "/properties" },
       ],
     },
     { id: "about", label: "About", path: "/about" },

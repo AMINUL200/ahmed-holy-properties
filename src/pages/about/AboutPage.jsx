@@ -24,6 +24,7 @@ import {
   Award,
 } from 'lucide-react'
 import PageHelmet from '../../component/common/PageHelmet'
+import PageLoading from '../../component/common/PageLoading'
 
 /* ─────────────────────────────────────────
    DATA
@@ -588,6 +589,19 @@ function CTASection() {
    PAGE
 ───────────────────────────────────────── */
 export default function AboutPage() {
+    const [loading, setLoading] = React.useState(true);
+
+  React.useEffect(() => {
+    // Simulate loading time (e.g., fetching data or assets)
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }, []);
+
+
+if(loading){
+  return <PageLoading/>
+}
   return (
     <>
       <PageHelmet title="About Us | Ahmed Holy Properties - Trusted Property Services" />
