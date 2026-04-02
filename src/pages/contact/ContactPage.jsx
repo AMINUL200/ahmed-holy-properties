@@ -15,6 +15,9 @@ import {
   FileText,
   AlignLeft,
   Smartphone,
+  Building2,
+  Globe,
+  Headphones,
 } from "lucide-react";
 import PageHelmet from "../../component/common/PageHelmet";
 import PageLoading from "../../component/common/PageLoading";
@@ -138,8 +141,7 @@ function HeroSection() {
           className="mt-4 text-base sm:text-lg max-w-lg mx-auto leading-relaxed"
           style={{ color: "#BAE6FD" }}
         >
-          Get in touch with us for any property service or inquiry — we're here
-          to help you every step of the way.
+          Get in touch with Skilled Workers Cloud for professional property solutions — we're here to help you every step of the way.
         </p>
 
         {/* Quick info strip */}
@@ -152,8 +154,8 @@ function HeroSection() {
           }}
         >
           {[
-            { icon: Phone, text: "+91 9876543210" },
-            { icon: Mail, text: "info@ahmedholyproperties.com" },
+            { icon: Phone, text: "+44 0208 129 1655" },
+            { icon: Mail, text: "info@skilledworkerscloud.com" },
             { icon: Clock, text: "Mon–Sat: 9AM – 7PM" },
           ].map(({ icon: Icon, text }) => (
             <div key={text} className="flex items-center gap-2">
@@ -385,7 +387,7 @@ function ContactForm() {
               label="Phone Number"
               type="tel"
               name="phone"
-              placeholder="+91 9876543210"
+              placeholder="+44 074 6728 4718"
               value={form.phone}
               onChange={handleChange}
             />
@@ -454,39 +456,40 @@ function ContactForm() {
   );
 }
 
+// Updated contact information for Skilled Workers Cloud
 const contactItems = [
   {
-    icon: MapPin,
-    label: "Our Address",
-    value: "Kolkata, West Bengal, India",
-    sub: "Visit us at our office",
+    icon: Building2,
+    label: "Our Office",
+    value: "Suite 602, 6th Floor, 252-262 Romford Road",
+    sub: "London, E7 9HZ, United Kingdom",
+    accent: "#2563EB",
+    soft: "#EFF6FF",
+    border: "#BFDBFE",
+  },
+  {
+    icon: Mail,
+    label: "Email Us",
+    value: "info@skilledworkerscloud.com",
+    sub: "For general inquiries and support",
+    accent: "#0EA5E9",
+    soft: "#F0F9FF",
+    border: "#BAE6FD",
+  },
+  {
+    icon: Headphones,
+    label: "Technical Support",
+    value: "support@skilledworkerscloud.co.uk",
+    sub: "After sales for technical support",
     accent: "#2563EB",
     soft: "#EFF6FF",
     border: "#BFDBFE",
   },
   {
     icon: Phone,
-    label: "Phone Number",
-    value: "+91 9876543210",
-    sub: "Call us anytime during working hours",
-    accent: "#0EA5E9",
-    soft: "#F0F9FF",
-    border: "#BAE6FD",
-  },
-  {
-    icon: Mail,
-    label: "Email Address",
-    value: "info@ahmedholyproperties.com",
-    sub: "We reply within 24 hours",
-    accent: "#2563EB",
-    soft: "#EFF6FF",
-    border: "#BFDBFE",
-  },
-  {
-    icon: Clock,
-    label: "Working Hours",
-    value: "Mon – Sat: 9:00 AM – 7:00 PM",
-    sub: "Sunday: Closed",
+    label: "Call Us",
+    value: "Landline: +44 0208 129 1655",
+    sub: "Mobile & WhatsApp: +44 074 6728 4718",
     accent: "#0EA5E9",
     soft: "#F0F9FF",
     border: "#BAE6FD",
@@ -539,7 +542,7 @@ function ContactInfo() {
                   {label}
                 </p>
                 <p
-                  className="text-sm font-semibold mt-0.5 truncate"
+                  className="text-sm font-semibold mt-0.5"
                   style={{ color: "#0F172A" }}
                 >
                   {value}
@@ -565,8 +568,11 @@ function ContactInfo() {
         <p className="text-xs mt-1" style={{ color: "#93C5FD" }}>
           Reach us directly via WhatsApp for instant responses.
         </p>
-        <button
-          className="mt-3 flex items-center gap-2 text-xs font-bold px-4 py-2 rounded-lg text-white transition-all hover:scale-[1.03]"
+        <a
+          href="https://wa.me/4407467284718"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-3 inline-flex items-center gap-2 text-xs font-bold px-4 py-2 rounded-lg text-white transition-all hover:scale-[1.03]"
           style={{
             background: "rgba(255,255,255,0.15)",
             border: "1px solid rgba(255,255,255,0.2)",
@@ -574,7 +580,7 @@ function ContactInfo() {
         >
           <MessageCircle size={13} />
           WhatsApp Us
-        </button>
+        </a>
       </div>
     </div>
   );
@@ -606,6 +612,9 @@ function MapSection() {
           >
             Our <GradientText>Location</GradientText>
           </h2>
+          <p className="mt-2 text-sm" style={{ color: "#64748B" }}>
+            Suite 602, 6th Floor, 252-262 Romford Road, London, E7 9HZ
+          </p>
         </div>
 
         <div
@@ -616,8 +625,8 @@ function MapSection() {
           }}
         >
           <iframe
-            title="Ahmed Holy Properties Location"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235527.46640875384!2d88.16366083773435!3d22.535564582818235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f882db4908f667%3A0x43e330e68f6c2cbc!2sKolkata%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1712000000000"
+            title="Skilled Workers Cloud Location"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.123456789012!2d0.034567!3d51.528558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761d3f4f6c2c9f%3A0x1234567890abcdef!2s252-262%20Romford%20Rd%2C%20London%20E7%209HZ%2C%20UK!5e0!3m2!1sen!2sin!4v1712000000000"
             width="100%"
             height="380"
             style={{ border: 0, display: "block" }}
@@ -710,7 +719,7 @@ function CTASection() {
 
         <div className="mt-8 flex flex-wrap justify-center gap-4">
           <a
-            href="tel:+919876543210"
+            href="tel:+442081291655"
             className="group flex items-center gap-2 px-8 py-4 rounded-xl font-bold text-sm transition-all duration-200 hover:scale-[1.04] active:scale-[0.97]"
             style={{
               background: "#fff",
@@ -722,7 +731,7 @@ function CTASection() {
             Call Now
           </a>
           <a
-            href="https://wa.me/919876543210"
+            href="https://wa.me/4407467284718"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 px-8 py-4 rounded-xl font-bold text-sm text-white transition-all duration-200 hover:scale-[1.04] active:scale-[0.97]"
@@ -745,22 +754,22 @@ function CTASection() {
    MAIN PAGE
 ───────────────────────────────────────── */
 export default function ContactPage() {
-    const [loading, setLoading] = React.useState(true);
+  const [loading, setLoading] = React.useState(true);
 
   React.useEffect(() => {
-    // Simulate loading time (e.g., fetching data or assets)
     const timer = setTimeout(() => {
       setLoading(false);
     }, 2000);
+    return () => clearTimeout(timer);
   }, []);
 
+  if (loading) {
+    return <PageLoading />;
+  }
 
-if(loading){
-  return <PageLoading/>
-}
   return (
     <>
-      <PageHelmet title="Contact Us | Ahmed Holy Properties - Trusted Property Services" />
+      <PageHelmet title="Contact Us | Skilled Workers Cloud - Professional Property Services" />
 
       <div
         className="min-h-screen font-sans pt-8"
